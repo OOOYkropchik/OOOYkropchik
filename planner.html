@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>План питания — Укропчик</title>
+  <meta name="description" content="Укропчик — спокойный помощник в мире еды: калькуляторы ИМТ и калорий, сравнение продуктов и план питания.">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="planner">
+  <header id="site-header"></header>
+  <main>
+    <div class="page-wrap page">
+      <div class="planner-head">
+        <div class="page-head">
+          <div class="eyebrow"><i data-icon="calendar-days" data-size="14"></i> Ваш план — ваше решение</div>
+          <h1 class="brand-display">Еда на неделю, <span class="accent-text">без головоломки.</span></h1>
+          <p class="lead">Добавляйте блюда, которые вам нравятся. План хранится только в этом браузере — никаких аккаунтов.</p>
+        </div>
+        <div class="total-box">
+          <p class="t1">Итого за день</p>
+          <div class="t2"><strong class="brand-display" id="daily-kcal">0</strong><span>ккал</span></div>
+          <p class="t3">Оценка по добавленным блюдам</p>
+        </div>
+      </div>
+      <div class="days" id="days" role="tablist" aria-label="Выбрать день"></div>
+      <div class="planner-layout">
+        <div class="meals" id="meals"></div>
+        <aside class="aside">
+          <section class="surface">
+            <p class="kicker">Добавить своё</p>
+            <h2 class="brand-display">Своя идея для перекуса</h2>
+            <form id="form-custom">
+              <label>Что съели?<input class="field" id="custom-food" placeholder="Например, бутерброд" maxlength="80" required></label>
+              <label>Порция<input class="field" id="custom-portion" value="1 порция" placeholder="1 порция" maxlength="40"></label>
+              <label>Ккал на порцию<input class="field" id="custom-kcal" type="number" min="1" max="5000" placeholder="Примерно" required></label>
+              <button class="btn-primary btn-block" type="submit"><i data-icon="plus"></i> Добавить в перекус</button>
+            </form>
+          </section>
+          <section class="flex-note">
+            <div class="icon-box"><i data-icon="heart" data-size="19"></i></div>
+            <h3 class="brand-display">Оставьте место гибкости</h3>
+            <p>Это не расписание, которому нужно следовать. Пропускайте, меняйте и добавляйте то, что вам нравится.</p>
+          </section>
+          <button type="button" class="btn-soft btn-block" id="btn-clear-day"><i data-icon="rotate-ccw" data-size="15"></i> Очистить этот день</button>
+          <p class="store-note">План сохраняется автоматически в памяти этого браузера.</p>
+        </aside>
+      </div>
+      <p class="disclaimer"><i data-icon="info" data-size="18"></i><span>Показатели ИМТ и калорийности — образовательные ориентиры, а не медицинский диагноз или индивидуальная рекомендация по лечению.</span></p>
+    </div>
+  </main>
+  <footer id="site-footer"></footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Регистрация — Укропчик</title>
+  <meta name="description" content="Укропчик — спокойный помощник в мире еды: калькуляторы ИМТ и калорий, сравнение продуктов и план питания.">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="sign-up">
+  <div class="auth-page soft-grid">
+    <a class="auth-home" href="index.html"><span class="leaf-mark"><i data-icon="leaf" data-size="20"></i></span><span class="brand-display t">укропчик.</span></a>
+    <div style="width:100%;max-width:440px">
+      <p class="sub">Начните с простого шага</p>
+      <div class="auth-card">
+        <h1 class="brand-display">Регистрация</h1>
+        <form id="form-signup">
+          <label class="lbl">Имя<input class="field" id="su-name" autocomplete="name" maxlength="80" required></label>
+          <label class="lbl">Электронная почта<input class="field" id="su-email" type="email" autocomplete="email" required></label>
+          <label class="lbl">Пароль (от 6 символов)<input class="field" id="su-password" type="password" autocomplete="new-password" minlength="6" required></label>
+          <p class="error-text" id="auth-error" role="alert" hidden style="margin:0"></p>
+          <button class="btn-primary" type="submit">Создать аккаунт <i data-icon="arrow-right"></i></button>
+        </form>
+        <p class="switch">Уже есть аккаунт? <a href="sign-in.html">Войти</a></p>
+      </div>
+      <p class="auth-demo">Учебный вариант: аккаунт хранится только в этом браузере, а не на сервере.</p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

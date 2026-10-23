@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Сравнить продукты — Укропчик</title>
+  <meta name="description" content="Укропчик — спокойный помощник в мире еды: калькуляторы ИМТ и калорий, сравнение продуктов и план питания.">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="compare">
+  <header id="site-header"></header>
+  <main>
+    <div class="page-wrap page">
+      <div class="page-head">
+        <div class="eyebrow"><i data-icon="scale" data-size="14"></i> Сравниваем спокойно</div>
+        <h1 class="brand-display">Не «плохое» и «хорошее». <span class="accent-text">Просто разное.</span></h1>
+        <p class="lead">Сравните пищевую ценность на 100 г и выберите то, что подходит вашим вкусам и обстоятельствам. Все продукты могут быть частью рациона.</p>
+      </div>
+      <section class="surface compare-box">
+        <div class="compare-top">
+          <div><p class="kicker">Сравнение продуктов</p><h2 class="brand-display">Что любопытно сравнить?</h2></div>
+          <span class="chip">Данные на 100 г</span>
+        </div>
+        <div class="compare-selects">
+          <label class="lbl">Продукт<select class="field" id="select-first"></select></label>
+          <span class="compare-and">и</span>
+          <label class="lbl">С чем сравнить<select class="field" id="select-second"></select></label>
+        </div>
+        <button class="btn-primary compare-btn" type="button" id="btn-compare">Сравнить продукты <i data-icon="arrow-right"></i></button>
+        <div class="compare-results" id="compare-results"></div>
+        <p class="small-print">Примерные справочные значения на 100 г. Для упакованных продуктов сверяйтесь с маркировкой конкретного производителя.</p>
+      </section>
+      <section class="catalog">
+        <div class="catalog-head">
+          <div><div class="eyebrow"><i data-icon="book-open" data-size="14"></i> Небольшой справочник</div><h2 class="brand-display">Идеи для сравнения</h2></div>
+          <div class="filters" id="filters"></div>
+        </div>
+        <div class="catalog-grid" id="catalog-grid"></div>
+      </section>
+    </div>
+  </main>
+  <footer id="site-footer"></footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

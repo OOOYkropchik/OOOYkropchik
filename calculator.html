@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Калькуляторы — Укропчик</title>
+  <meta name="description" content="Укропчик — спокойный помощник в мире еды: калькуляторы ИМТ и калорий, сравнение продуктов и план питания.">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="calculator">
+  <header id="site-header"></header>
+  <main>
+    <div class="page-wrap page">
+      <div class="page-head">
+        <div class="eyebrow"><i data-icon="calculator" data-size="14"></i> Инструменты для себя</div>
+        <h1 class="brand-display">Немного цифр — <span class="accent-text">больше ясности.</span></h1>
+        <p class="lead">Здесь нет оценок и правильных ответов. Только ориентиры, которые помогают лучше понимать потребности своего тела.</p>
+      </div>
+      <div class="two-col">
+        <section class="surface card-pad">
+          <div class="card-head">
+            <div>
+              <p class="kicker">01 / Рост и вес</p>
+              <h2 class="brand-display">Индекс массы тела</h2>
+              <p class="hint">ИМТ — простое соотношение веса и роста. Он не учитывает состав тела и индивидуальные особенности.</p>
+            </div>
+            <span class="icon-box lg"><i data-icon="scale" data-size="22"></i></span>
+          </div>
+          <form id="form-bmi" class="form-grid">
+            <label class="lbl">Рост, см<input class="field" id="height" type="number" min="100" max="230" placeholder="Например, 168" required></label>
+            <label class="lbl">Вес, кг<input class="field" id="weight" type="number" min="25" max="350" step="0.1" placeholder="Например, 65" required></label>
+            <button class="btn-primary span-2" type="submit">Рассчитать ИМТ <i data-icon="arrow-right"></i></button>
+          </form>
+          <p class="error-text" id="bmi-error" role="alert" hidden></p>
+          <div class="result" id="bmi-result" hidden>
+            <div class="result-row">
+              <div><p class="label">Ваш расчётный ИМТ</p><strong class="big brand-display" id="bmi-value"></strong></div>
+              <span class="tag" id="bmi-category"></span>
+            </div>
+            <p class="note">Это не диагноз и не оценка здоровья. Один показатель не описывает человека целиком.</p>
+          </div>
+        </section>
+
+        <section class="surface card-pad">
+          <div class="card-head">
+            <div>
+              <p class="kicker">02 / Примерная оценка</p>
+              <h2 class="brand-display">Суточная энергия</h2>
+              <p class="hint">Формула оценивает потребность в энергии с учётом возраста и активности. Реальные потребности могут отличаться. Рост и вес берутся из блока слева.</p>
+            </div>
+            <span class="icon-box lg accent"><i data-icon="heart" data-size="22"></i></span>
+          </div>
+          <form id="form-energy" class="form-grid">
+            <label class="lbl">Возраст, лет<input class="field" id="age" type="number" min="18" max="100" placeholder="Например, 32" required></label>
+            <label class="lbl">Пол для формулы
+              <select class="field" id="sex"><option value="female">Женский</option><option value="male">Мужской</option></select>
+            </label>
+            <label class="lbl span-2">Уровень активности
+              <select class="field" id="activity">
+                <option value="1.2">В основном сижу, мало движения</option>
+                <option value="1.375" selected>Небольшая активность, прогулки</option>
+                <option value="1.55">Регулярные тренировки 3–5 раз в неделю</option>
+                <option value="1.725">Активный образ жизни, частые тренировки</option>
+              </select>
+            </label>
+            <label class="lbl span-2">Ваш ориентир
+              <select class="field" id="goal">
+                <option value="maintain">Поддерживать привычный вес</option>
+                <option value="gentle-loss">Мягко снизить вес (примерно −10%)</option>
+                <option value="gain">Постепенно увеличить вес (примерно +8%)</option>
+              </select>
+            </label>
+            <button class="btn-primary span-2" type="submit">Получить ориентир <i data-icon="arrow-right"></i></button>
+          </form>
+          <p class="error-text" id="energy-error" role="alert" hidden></p>
+          <div class="result" id="energy-result" hidden>
+            <p class="label">Расчётный ориентир на день</p>
+            <div style="display:flex;align-items:baseline;gap:8px;margin-top:4px"><strong class="big s brand-display" id="energy-value"></strong><span style="font-weight:600">ккал</span></div>
+            <p class="note">Оценка приблизительная. Необязательно считать калории, чтобы питаться сбалансированно.</p>
+          </div>
+        </section>
+      </div>
+      <p class="disclaimer"><i data-icon="info" data-size="18"></i><span>Показатели ИМТ и калорийности — образовательные ориентиры, а не медицинский диагноз или индивидуальная рекомендация по лечению.</span></p>
+    </div>
+  </main>
+  <footer id="site-footer"></footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

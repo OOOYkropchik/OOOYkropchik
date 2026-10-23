@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Профиль — Укропчик</title>
+  <meta name="description" content="Укропчик — спокойный помощник в мире еды: калькуляторы ИМТ и калорий, сравнение продуктов и план питания.">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="profile">
+  <header id="site-header"></header>
+  <main>
+    <div class="page-wrap page">
+      <div class="page-head">
+        <div class="eyebrow"><i data-icon="circle-user-round" data-size="14"></i> Ваше пространство</div>
+        <h1 class="brand-display">Профиль <span class="accent-text">Укропчика.</span></h1>
+        <p class="lead">Здесь можно изменить имя, которое связано с вашим аккаунтом. Все инструменты по-прежнему доступны бесплатно.</p>
+      </div>
+      <div class="profile-grid">
+        <section class="surface card-pad identity">
+          <div class="deco"></div>
+          <div class="identity-top">
+            <div class="avatar" id="profile-initials">У</div>
+            <div><p class="kicker">Аккаунт</p><h2 class="brand-display" id="profile-name">Ваш профиль</h2></div>
+          </div>
+          <div class="email-block"><p class="kicker">Электронная почта</p><p id="profile-email"></p></div>
+          <p class="privacy">Профиль и план питания хранятся только в памяти этого браузера (localStorage) — на сервер ничего не отправляется.</p>
+        </section>
+        <section class="surface card-pad profile-edit">
+          <p class="kicker">Личные данные</p>
+          <h2 class="brand-display">Как к вам обращаться?</h2>
+          <p class="hint" style="margin-top:8px">Имя будет сохранено в вашем профиле.</p>
+          <form id="form-profile">
+            <label class="lbl" for="profile-display-name">Отображаемое имя<input id="profile-display-name" class="field" maxlength="80" autocomplete="name" placeholder="Например, Мария Иванова" required></label>
+            <p class="ok-text" id="profile-saved" role="status" hidden style="margin:0">Имя сохранено.</p>
+            <button class="btn-primary" type="submit" id="btn-save-profile"><i data-icon="save"></i> Сохранить имя</button>
+          </form>
+        </section>
+      </div>
+      <div class="profile-banner">
+        <div><p class="t1">Все инструменты открыты</p><p class="t2 brand-display">Никаких подписок и скрытых функций.</p></div>
+        <a href="planner.html" class="banner-btn">К плану питания <i data-icon="arrow-right"></i></a>
+      </div>
+    </div>
+  </main>
+  <footer id="site-footer"></footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
